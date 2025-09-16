@@ -20,5 +20,5 @@ The system consists of several key components:
 - **API Server**: HTTP REST API for client interactions
 - **Client Library**: High-level client for application integration
 
-Sample (Demo coming soon)
+## Sample (Demo coming soon)
 <img width="761" height="282" alt="Screenshot 2025-09-15 at 11 15 16 PM" src="https://github.com/user-attachments/assets/80d683d4-c696-48ed-b42d-df55bed0ec60" />
