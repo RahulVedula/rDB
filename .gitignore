@@ -1,0 +1,33 @@
+# Rust build artifacts
+/target/
+**/*.rs.bk
+Cargo.lock
+
+# Database files and logs
+/data_node_*/
+/wal_node_*
+*.log
+*.pid
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+
+# Custom scripts and docs to ignore
+run_three_nodes.sh
+CLUSTER_SETUP.md
+setup.sh
+test_cluster.sh
+PROJECT_SUMMARY.md

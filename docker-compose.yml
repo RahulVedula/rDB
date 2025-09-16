@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  kv-store-1:
+    build: .
+    ports:
+      - "8000:8000"
+      - "9000:9000"
+    volumes:
+      - kv-data-1:/app/data
+      - kv-wal-1:/app/wal
+    command: ["./distributed-kv-store", "server", "--node-id", "1", "--address", "0.0.0.0", "--port", "8000", "--http-port", "9000"]
+    environment:
+      - RUST_LOG=info
+
+  kv-store-2:
+    build: .
+    ports:
+      - "8001:8000"
+      - "9001:9000"
+    volumes:
+      - kv-data-2:/app/data
+      - kv-wal-2:/app/wal
+    command: ["./distributed-kv-store", "server", "--node-id", "2", "--address", "0.0.0.0", "--port", "8000", "--http-port", "9000"]
+    environment:
+      - RUST_LOG=info
+
+  kv-store-3:
+    build: .
+    ports:
+      - "8002:8000"
+      - "9002:9000"
+    volumes:
+      - kv-data-3:/app/data
+      - kv-wal-3:/app/wal
+    command: ["./distributed-kv-store", "server", "--node-id", "3", "--address", "0.0.0.0", "--port", "8000", "--http-port", "9000"]
+    environment:
+      - RUST_LOG=info
+
+volumes:
+  kv-data-1:
+  kv-data-2:
+  kv-data-3:
+  kv-wal-1:
+  kv-wal-2:
+  kv-wal-3:
