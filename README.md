@@ -12,7 +12,8 @@ wired into the running server yet: please see [Status](#status--roadmap) for exa
 line is.
 
 ## Demo
-A super quick run through of starting the client + a small walkthrough
+A super quick run through of starting the server + a small walkthrough
+
 ![rDB demo](docs/demo.gif)
 
 
